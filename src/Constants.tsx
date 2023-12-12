@@ -8,6 +8,12 @@ interface socialMedia {
   url: string;
 }
 
+interface PeopleInfo {
+  [key: string]: {
+    name: string;
+    position: string;
+  };
+}
 export const navItems: navItems[] = [
   {
     name: "Home",
@@ -45,3 +51,19 @@ export const socialMedia: socialMedia[] = [
     url: "https://www.tiktok.com/@iktan_roving",
   },
 ];
+
+export const peopleInfo: PeopleInfo = {
+  Dani: {
+    name: "Daniela Espinosa",
+    position: "Team Leader",
+  },
+  David: {
+    name: "David García",
+    position: "Team Advisor",
+  },
+  Bernardo: {
+    name: "Bernardo Salgado",
+    position: "Safety Officer",
+  },
+
+};
