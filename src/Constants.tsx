@@ -6,7 +6,6 @@ interface navItems {
 interface socialMedia {
   name: string;
   url: string;
-  icon: string;
 }
 
 export const navItems: navItems[] = [
@@ -36,16 +35,13 @@ export const socialMedia: socialMedia[] = [
   {
     name: "Facebook",
     url: "https://www.facebook.com/IKTANRoving/",
-    icon: "fa-facebook", // Corrected icon name
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/iktan_roving/",
-    icon: "fa-instagram", // Corrected icon name
   },
   {
     name: "TikTok",
     url: "https://www.tiktok.com/@iktan_roving",
-    icon: "fa-tiktok", // Corrected icon name
   },
 ];

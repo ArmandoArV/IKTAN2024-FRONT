@@ -3,6 +3,10 @@ import styles from "./HeaderComponent.module.css";
 import MySVG from "@/Components/SVGComponent/SVGComponent";
 import { navItems, socialMedia } from "@/Constants";
 import logo from "@/Images/Logo.png";
+import Facebook from "@/Images/Facebook.png";
+import Instagram from "@/Images/Instagram.png";
+import TikTok from "@/Images/TikTok.png";
+import Link from "next/link";
 
 export default function HeaderComponent() {
   return (
@@ -16,11 +20,29 @@ export default function HeaderComponent() {
             </a>
           </li>
         ))}
-        {socialMedia.map((item, index) => (
-          <li key={index} className={styles.navItem}>
-            <MySVG name={item.icon} color={"#FF0000"} nameClass={styles.icon} />
+        <Link href={socialMedia[0].url} passHref>
+          <li className={styles.navItem}>
+            <img
+              src={Facebook.src}
+              alt="Facebook"
+              className={styles.socialMedia}
+            />
           </li>
-        ))}
+        </Link>
+        <Link href={socialMedia[1].url} passHref>
+          <li className={styles.navItem}>
+            <img
+              src={Instagram.src}
+              alt="Instagram"
+              className={styles.socialMedia}
+            />
+          </li>
+        </Link>
+        <Link href={socialMedia[2].url} passHref>
+          <li className={styles.navItem}>
+            <img src={TikTok.src} alt="TikTok" className={styles.socialMedia} />
+          </li>
+        </Link>
       </ul>
     </nav>
   );
