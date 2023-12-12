@@ -14,11 +14,11 @@ export default function HeaderComponent() {
       <img src={logo.src} alt="Logo" width={100} height={100} />
       <ul className={styles.navbarNav}>
         {navItems.map((item, index) => (
-          <li key={index} className={styles.navItem}>
-            <a href={item.path} className={styles.navLink}>
-              {item.name}
-            </a>
-          </li>
+          <Link href={item.path} passHref>
+            <li key={index} className={styles.navItem}>
+              <p className={styles.navLink}>{item.name}</p>
+            </li>
+          </Link>
         ))}
         <Link href={socialMedia[0].url} passHref>
           <li className={styles.navItem}>
