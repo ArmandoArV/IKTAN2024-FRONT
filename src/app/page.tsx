@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Rover from "@/Images/Rover.png";
+import { RoverModel } from "@/Components/RoverModel/RoverModel";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.right}>
-        <img src={Rover.src} alt="Rover" className={styles.rover} />
+        <RoverModel />
       </div>
     </main>
   );
