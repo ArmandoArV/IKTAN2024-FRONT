@@ -11,38 +11,34 @@ import Link from "next/link";
 export default function HeaderComponent() {
   return (
     <nav className={styles.navbar}>
-      <img src={logo.src} alt="Logo" width={100} height={100} />
+      <Link href="/" passHref>
+        <img src={logo.src} alt="Logo" width={100} height={100} />
+      </Link>
       <ul className={styles.navbarNav}>
-        {navItems.map((item, index) => (
-          <Link href={item.path} passHref>
-            <li key={index} className={styles.navItem}>
+        {navItems.map((item) => (
+          <Link key={item.id} href={item.path} passHref>
+            <li className={styles.navItem}>
               <p className={styles.navLink}>{item.name}</p>
             </li>
           </Link>
         ))}
-        <Link href={socialMedia[0].url} passHref>
-          <li className={styles.navItem}>
-            <img
-              src={Facebook.src}
-              alt="Facebook"
-              className={styles.socialMedia}
-            />
-          </li>
-        </Link>
-        <Link href={socialMedia[1].url} passHref>
-          <li className={styles.navItem}>
-            <img
-              src={Instagram.src}
-              alt="Instagram"
-              className={styles.socialMedia}
-            />
-          </li>
-        </Link>
-        <Link href={socialMedia[2].url} passHref>
-          <li className={styles.navItem}>
-            <img src={TikTok.src} alt="TikTok" className={styles.socialMedia} />
-          </li>
-        </Link>
+        {socialMedia.map((social, index) => (
+          <Link key={index} href={social.url} passHref>
+            <li className={styles.navItem}>
+              <img
+                src={
+                  social.name === "Facebook"
+                    ? Facebook.src
+                    : social.name === "Instagram"
+                    ? Instagram.src
+                    : TikTok.src
+                }
+                alt={social.name}
+                className={styles.socialMedia}
+              />
+            </li>
+          </Link>
+        ))}
       </ul>
     </nav>
   );

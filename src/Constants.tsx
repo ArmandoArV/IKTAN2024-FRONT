@@ -1,4 +1,5 @@
 interface navItems {
+  id: number;
   name: string;
   path: string;
 }
@@ -16,22 +17,27 @@ interface PeopleInfo {
 }
 export const navItems: navItems[] = [
   {
+    id: 0,
     name: "Home",
     path: "/",
   },
   {
+    id: 1,
     name: "Team",
     path: "/team",
   },
   {
+    id: 2,
     name: "Challenge",
     path: "/challenge",
   },
   {
+    id: 3,
     name: "Achievements",
     path: "/achievements",
   },
   {
+    id: 4,
     name: "Sponsors",
     path: "/sponsors",
   },
