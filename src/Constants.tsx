@@ -1,3 +1,5 @@
+import encendida from "@Images/encendida.png";
+
 interface navItems {
   id: number;
   name: string;
@@ -15,6 +17,7 @@ interface PeopleInfo {
     position: string;
   };
 }
+
 export const navItems: navItems[] = [
   {
     id: 0,
@@ -40,6 +43,16 @@ export const navItems: navItems[] = [
     id: 4,
     name: "Sponsors",
     path: "/sponsors",
+  },
+  {
+    id: 5,
+    name: "Dashboard",
+    path: "/dashboard",
+  },
+  {
+    id: 6,
+    name: "Competition",
+    path: "/competition",
   },
 ];
 
@@ -71,5 +84,4 @@ export const peopleInfo: PeopleInfo = {
     name: "Bernardo Salgado",
     position: "Safety Officer",
   },
-
 };

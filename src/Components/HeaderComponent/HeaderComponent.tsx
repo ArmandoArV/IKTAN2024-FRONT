@@ -34,7 +34,7 @@ export default function HeaderComponent() {
                     : TikTok.src
                 }
                 alt={social.name}
-                className={styles.socialMedia}
+                className={styles.socialMedias}
               />
             </li>
           </Link>
