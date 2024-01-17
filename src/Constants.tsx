@@ -1,5 +1,3 @@
-import encendida from "@Images/encendida.png";
-
 interface navItems {
   id: number;
   name: string;
@@ -16,6 +14,10 @@ interface PeopleInfo {
     name: string;
     position: string;
   };
+}
+
+interface temperatureValues {
+  [key: string]: number;
 }
 
 export const navItems: navItems[] = [
@@ -84,4 +86,10 @@ export const peopleInfo: PeopleInfo = {
     name: "Bernardo Salgado",
     position: "Safety Officer",
   },
+};
+
+export const temperatureValues: temperatureValues = {
+  "temperature-high": 40,
+  "temperature-half": 30,
+  "temperature-low": 20,
 };

@@ -4,9 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #000;
+  height: 100%;
 }
 
 .topContainer {
@@ -14,9 +12,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  height: 100%;
-  padding: 1em;
+  width: 100%;
+  height: 50%;
 }
 
 .bottomContainer {
@@ -24,8 +21,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 1em;
-  background-color: black;
+  width: 60%;
+  height: 50%;
 }
