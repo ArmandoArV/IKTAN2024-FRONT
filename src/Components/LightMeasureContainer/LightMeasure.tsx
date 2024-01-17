@@ -29,12 +29,16 @@ const LightMeasure: React.FC = () => {
 
   return (
     <div className={styles.contenedorComponenteLuz}>
-      <LightComponent imagen={imagenLuz} isOn={isEncendido} />
-      <TurnOn
-        funcionalidad={setLuz}
-        texto={isEncendido ? "ENCENDER" : "APAGAR"}
-        isEncendido={isEncendido}
-      />
+      <div className={styles.topContainer}>
+        <LightComponent imagen={imagenLuz} isOn={isEncendido} />
+      </div>
+      <div className={styles.bottomContainer}>
+        <TurnOn
+          funcionalidad={setLuz}
+          texto={isEncendido ? "ENCENDER" : "APAGAR"}
+          isEncendido={isEncendido}
+        />
+      </div>
     </div>
   );
 };

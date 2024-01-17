@@ -7,7 +7,11 @@ interface BotonProps {
   isEncendido: boolean;
 }
 
-function TurnOn({ funcionalidad, texto, isEncendido }: BotonProps): ReactElement {
+function TurnOn({
+  funcionalidad,
+  texto,
+  isEncendido,
+}: BotonProps): ReactElement {
   return (
     <button
       className={isEncendido ? styles.botonLuz : styles.botonLuzApagada}
