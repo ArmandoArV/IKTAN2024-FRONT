@@ -12,8 +12,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 50%;
+  width: 50%;
+  height: 100%;
 }
 
 .bottomContainer {
@@ -21,6 +21,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 60%;
-  height: 50%;
+  width: 50%;
+  height: 10 0%;
 }

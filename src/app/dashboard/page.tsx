@@ -4,9 +4,10 @@ import styles from "./page.module.css";
 import LightMeasure from "@/Components/LightMeasureContainer/LightMeasure";
 import MySVG from "@/Components/SVGComponent/SVGComponent";
 import { temperatureValues } from "@/Constants";
+import ChartComponent from "@/Components/ChartComponent/ChartComponent";
 
 export default function Home() {
-  const [getTemperature, setTemperture] = useState<number>(31);
+  const [getTemperature, setTemperture] = useState<number>(0);
   const getTemperatureIconName = () => {
     switch (true) {
       case getTemperature > temperatureValues.high:
@@ -27,6 +28,16 @@ export default function Home() {
         return "black";
     }
   };
+  const chartData = [12, 19, 3, 5, 2, 3];
+  const chartLabels = [
+    "Label 1",
+    "Label 2",
+    "Label 3",
+    "Label 4",
+    "Label 5",
+    "Label 6",
+  ];
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -38,7 +49,15 @@ export default function Home() {
               alt="camera"
             />
           </div>
-          <div className={styles.bottomContainer}></div>
+          <div className={styles.bottomContainer}>
+            <ChartComponent
+              data={chartData}
+              labels={chartLabels}
+              graphTitle="So"
+              isFilled={true}
+              chartType="line"
+            />
+          </div>
         </div>
         <div className={styles.rightContainer}>
           <div className={styles.topContainer}>
