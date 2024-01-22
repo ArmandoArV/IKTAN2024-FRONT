@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.top}>
-        <h1 className={styles.title}>Iktan Roving</h1>
+        <h1 className={styles.title}>Our Team:</h1>
       </div>
       <div className={styles.bottom}>
         <div className={styles.leftBottom}>

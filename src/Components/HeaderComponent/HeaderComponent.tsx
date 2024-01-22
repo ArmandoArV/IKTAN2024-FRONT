@@ -22,6 +22,7 @@ export default function HeaderComponent() {
             </li>
           </Link>
         ))}
+        <div className={styles.socialMediaContainer}>
         {socialMedia.map((social, index) => (
           <Link key={index} href={social.url} passHref>
             <li className={styles.navItem}>
@@ -39,6 +40,7 @@ export default function HeaderComponent() {
             </li>
           </Link>
         ))}
+        </div>
       </ul>
     </nav>
   );

@@ -45,7 +45,7 @@ export default function Home() {
           <div className={styles.topContainerCamera}>
             <img
               className={styles.camera}
-              src="http://50.197.223.170/mjpg/video.mjpg"
+              src="http://187.237.116.40:82/mjpg/video.mjpg"
               alt="camera"
             />
           </div>
