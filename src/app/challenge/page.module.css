@@ -52,9 +52,22 @@
 
 .top h1 {
   font-size: 4rem;
+  overflow: hidden; /* Ensure the text is hidden initially */
+  white-space: nowrap; /* Prevent line breaks */
+  animation: type 5s steps(40, end) forwards;
 }
 
 .bottom p {
   font-size: 1.2rem;
   margin-top: 2em;
+}
+@keyframes type {
+  from {
+    width: 0;
+    border-right: 2px solid rgb(0, 0, 0);
+  }
+  to {
+    width: 100%;
+    border-right: none;
+  }
 }
