@@ -73,6 +73,59 @@
   background-color: #000000;
 }
 
+.hamburger p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.navbarNav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.open .navbarNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 4em;
+}
+
+.navItem {
+  padding: 0 0.5rem;
+  margin: 0.5em;
+}
+
+.navItem:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.open .navItem {
+  padding: 1em;
+  margin: 0;
+}
+
 @media (max-width: 767px) {
   .hamburger {
     display: flex;

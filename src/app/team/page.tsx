@@ -13,26 +13,31 @@ export default function Home() {
       </div>
       <div className={styles.bottom}>
         <div className={styles.leftBottom}>
-          <PeopleComponent
-            name={peopleInfo.David.name}
-            position={peopleInfo.David.position}
-            image={David}
-          />
+          <div className={styles.peopleContainer}>
+            <PeopleComponent
+              name={peopleInfo.David.name}
+              position={peopleInfo.David.position}
+              image={David}
+            />
+          </div>
+          <div className={styles.peopleContainer}>
+            {" "}
+            <PeopleComponent
+              name={peopleInfo.Dani.name}
+              position={peopleInfo.Dani.position}
+              image={Dani}
+            />
+          </div>
+          <div className={styles.peopleContainer}>
+            {" "}
+            <PeopleComponent
+              name={peopleInfo.Bernardo.name}
+              position={peopleInfo.Bernardo.position}
+              image={Bernardo}
+            />
+          </div>
         </div>
-        <div className={styles.middleBottom}>
-          <PeopleComponent
-            name={peopleInfo.Dani.name}
-            position={peopleInfo.Dani.position}
-            image={Dani}
-          />
-        </div>
-        <div className={styles.rightBottom}>
-          <PeopleComponent
-            name={peopleInfo.Bernardo.name}
-            position={peopleInfo.Bernardo.position}
-            image={Bernardo}
-          />
-        </div>
+        <div className={styles.rightBottom}></div>
       </div>
     </main>
   );

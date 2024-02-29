@@ -9,7 +9,7 @@ import TikTok from "../../Images/TikTok.png";
 import Link from "next/link";
 
 export default function HeaderComponent() {
-  const [isHeaderOpen, setIsHeaderOpen] = useState(false);
+  const [isHeaderOpen, setIsHeaderOpen] = useState(true);
 
   const toggleHeader = () => {
     setIsHeaderOpen(!isHeaderOpen);
@@ -25,6 +25,7 @@ export default function HeaderComponent() {
         )}
       </button>
       <nav className={`${styles.navbar} ${isHeaderOpen ? "" : styles.open}`}>
+        
         <Link href="/" passHref>
           <img
             className={styles.logo}

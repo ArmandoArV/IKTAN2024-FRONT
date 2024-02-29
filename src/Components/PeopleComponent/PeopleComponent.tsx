@@ -11,14 +11,16 @@ interface PeopleComponentProps {
 export default function PeopleComponent(props: PeopleComponentProps) {
   return (
     <div className={styles.container}>
-      <div className={styles.top} id={props.id}>
-        <img src={props.image?.src} alt={props.name} />
+      <div className={styles.left} id={props.id}>
+        <div className={styles.imgContainer}>
+          <img src={props.image?.src} alt={props.name} />
+        </div>
       </div>
-      <div className={styles.bottom}>
-        <div className={styles.bottomTop}>
+      <div className={styles.right}>
+        <div className={styles.rightTop}>
           <h1>{props.name}</h1>
         </div>
-        <div className={styles.bottomBottom}>
+        <div className={styles.rightBottom}>
           <p>{props.position}</p>
         </div>
       </div>
