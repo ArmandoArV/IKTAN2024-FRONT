@@ -39,5 +39,3 @@ next.config.js
 
 # amplify
 node_modules
-.amplify
-amplifyconfiguration*
