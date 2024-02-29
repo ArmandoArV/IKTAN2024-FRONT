@@ -33,6 +33,8 @@
   cursor: pointer;
   height: 4em;
   width: 4em;
+  padding: 0.5em;
+  margin-left: 4em;
 }
 
 .socialMediaContainer {
@@ -53,4 +55,74 @@
   list-style: none;
   margin: 0.2em;
   height: 25px;
+}
+
+.open {
+  display: none;
+}
+
+.hamburger {
+  padding: 1em;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0.02;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+  position: fixed;
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+  }
+
+  .navbarNav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 4em;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .navItem {
+    padding: 1em;
+    margin: 0;
+  }
+
+  .open .navItem {
+    padding: 1em;
+    margin: 0;
+  }
+
+  .open .socialMediaContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin-left: 0.5em;
+    height: 25px;
+    border-left: 1px solid #ffffff;
+  }
+
+  .socialMediaContainer {
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+  }
 }
