@@ -55,3 +55,18 @@
   max-width: 1200px;
   color: #ffffff;
 }
+
+.boardImageContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+}
+
+.boardImageContainer img{
+  width: 100%;
+  height: auto;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}

@@ -5,6 +5,7 @@ import { peopleInfo } from "@/Constants";
 import Bernardo from "../../Images/Bernardo.jpg";
 import Dani from "../../Images/Dani.jpg";
 import David from "../../Images/David.jpg";
+import TeamPic from "../../Images/TeamPic.png";
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -37,7 +38,11 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className={styles.rightBottom}></div>
+        <div className={styles.rightBottom}>
+          <div className={styles.boardImageContainer}>
+            <img src={TeamPic.src} alt="Team" />
+          </div>
+        </div>
       </div>
     </main>
   );
