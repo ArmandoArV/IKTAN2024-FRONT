@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import LightComponent from "../LightComponent/LightComponent";
 import styles from "./ComponenteLuz.module.css";
 import { StaticImageData } from "next/image";
-import encendida from "@/Images/encendida.png";
-import apagada from "@/Images/apagada.png";
+import encendida from "../../Images/encendida.png";
+import apagada from "../../Images/apagada.png";
 import TurnOn from "../TurnOnComponent/TurnOn";
 
 interface ImagesDictionary {

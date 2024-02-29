@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./HeaderComponent.module.css";
 import { navItems, socialMedia } from "@/Constants";
-import logo from "@/Images/Logo.png";
-import Facebook from "@/Images/Facebook.png";
-import Instagram from "@/Images/Instagram.png";
-import TikTok from "@/Images/TikTok.png";
+import logo from "../../Images/Logo.png";
+import Facebook from "../../Images/Facebook.png";
+import Instagram from "../../Images/Instagram.png";
+import TikTok from "../../Images/TikTok.png";
 import Link from "next/link";
 
 export default function HeaderComponent() {

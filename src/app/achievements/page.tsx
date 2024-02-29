@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./page.module.css";
 import SliderComponent from "@/Components/SliderComponent/SliderComponent";
-import tec1 from "@/Images/tec1.jpg";
-import tec2 from "@/Images/tec2.jpg";
-import tec3 from "@/Images/tec3.jpg";
+import tec1 from "../../Images/tec1.jpg";
+import tec2 from "../../Images/tec2.jpg";
+import tec3 from "../../Images/tec3.jpg";
 
 export default function Home() {
   const images = [tec1, tec2, tec3];

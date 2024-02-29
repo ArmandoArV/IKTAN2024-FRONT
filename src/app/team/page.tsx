@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./page.module.css";
 import PeopleComponent from "@/Components/PeopleComponent/PeopleComponent";
 import { peopleInfo } from "@/Constants";
-import Bernardo from "@/Images/People/Bernardo.jpg";
-import Dani from "@/Images/People/Dani.jpg";
-import David from "@/Images/People/David.jpg";
+import Bernardo from "../../Images/People/Bernardo.jpg";
+import Dani from "../..Images/People/Dani.jpg";
+import David from "../..Images/People/David.jpg";
 export default function Home() {
   return (
     <main className={styles.main}>
