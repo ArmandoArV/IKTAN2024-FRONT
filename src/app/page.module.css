@@ -57,4 +57,9 @@
   .teamSection {
     padding: 0;
   }
+
+  .challengeSection {
+    flex-direction: column;
+    padding: 0;
+  }
 }
