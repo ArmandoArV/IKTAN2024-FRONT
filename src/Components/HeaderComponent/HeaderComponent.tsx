@@ -1,69 +1,63 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./HeaderComponent.module.css";
-import { navItems, socialMedia } from "@/Constants";
+import { navItems } from "@/Constants";
 import logo from "../../Images/Logo.png";
-import Facebook from "../../Images/Facebook.png";
-import Instagram from "../../Images/Instagram.png";
-import TikTok from "../../Images/TikTok.png";
-import Link from "next/link";
+interface MenuItem {
+  id: string;
+  label: string;
+  path: string;
+}
 
-export default function HeaderComponent() {
-  const [isHeaderOpen, setIsHeaderOpen] = useState(true);
+interface HeaderProps {
+  isAuthenticated: boolean;
+  isAdmin: boolean;
+  onMenuToggle: () => void;
+  idUser?: number;
+}
 
-  const toggleHeader = () => {
-    setIsHeaderOpen(!isHeaderOpen);
+const HeaderComponent: React.FC<HeaderProps> = ({
+  isAuthenticated,
+  isAdmin,
+}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
+  let filteredMenuItems: MenuItem[] = [];
+
   return (
-    <div>
-      <button onClick={toggleHeader} className={styles.hamburger}>
-        {isHeaderOpen ? (
-          <p>←</p>
-        ) : (
-          <p>☰</p>
-        )}
-      </button>
-      <nav className={`${styles.navbar} ${isHeaderOpen ? "" : styles.open}`}>
-        
-        <Link href="/" passHref>
-          <img
-            className={styles.logo}
-            src={logo.src}
-            alt="Logo"
-            width={100}
-            height={100}
-          />
-        </Link>
-        <ul className={styles.navbarNav}>
-          {navItems.map((item) => (
-            <Link key={item.id} href={item.path} passHref>
-              <li className={styles.navItem}>
-                <p className={styles.navLink}>{item.name}</p>
+    <>
+      <header className={styles.Header}>
+        <div
+          className={`${styles.headerMenu} ${isMenuOpen ? "active" : ""}`}
+          onClick={handleMenuToggle}
+        >
+          &#9776;
+        </div>
+        <div className={styles.headerLogo}>
+          <img src={logo.src} />
+        </div>
+      </header>
+      {isMenuOpen && (
+        <div
+          className={`${styles.MenuDesplegable} ${
+            isMenuOpen ? styles.open : ""
+          }`}
+        >
+          <ul className={`${styles.listaMenu} ${isMenuOpen ? "active" : ""}`}>
+            {navItems.map((item, index) => (
+              <li className={styles.listLi} key={index}>
+                <p>{item.name}</p>
               </li>
-            </Link>
-          ))}
-          <div className={styles.socialMediaContainer}>
-            {socialMedia.map((social, index) => (
-              <Link key={index} href={social.url} passHref>
-                <li className={styles.navItem}>
-                  <img
-                    src={
-                      social.name === "Facebook"
-                        ? Facebook.src
-                        : social.name === "Instagram"
-                        ? Instagram.src
-                        : TikTok.src
-                    }
-                    alt={social.name}
-                    className={styles.socialMedias}
-                  />
-                </li>
-              </Link>
             ))}
-          </div>
-        </ul>
-      </nav>
-    </div>
+          </ul>
+        </div>
+      )}
+    </>
   );
-}
+};
+
+export default HeaderComponent;
