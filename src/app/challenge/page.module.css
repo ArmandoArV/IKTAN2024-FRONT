@@ -61,6 +61,7 @@
   font-size: 1.2rem;
   margin-top: 2em;
 }
+
 @keyframes type {
   from {
     width: 0;
@@ -70,4 +71,8 @@
     width: 100%;
     border-right: none;
   }
+}
+
+@media (max-width: 767px) {
+
 }

@@ -36,6 +36,12 @@
   padding: 0;
   margin: 0 auto;
 }
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
 
 .rightBottom {
   display: flex;
@@ -74,3 +80,31 @@
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  .topteamSection {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .topMedium {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .bottom {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .leftBottom {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .rightBottom {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
