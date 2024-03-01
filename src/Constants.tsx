@@ -24,37 +24,37 @@ export const navItems: navItems[] = [
   {
     id: 0,
     name: "Home",
-    path: "/",
+    path: "landing",
   },
   {
     id: 1,
     name: "Team",
-    path: "/team",
+    path: "team",
   },
   {
     id: 2,
     name: "Challenge",
-    path: "/challenge",
+    path: "challenge",
   },
   {
     id: 3,
     name: "Achievements",
-    path: "/achievements",
+    path: "achievements",
   },
   {
     id: 4,
     name: "Sponsors",
-    path: "/sponsors",
+    path: "sponsors",
   },
   {
     id: 5,
     name: "Dashboard",
-    path: "/dashboard",
+    path: "dashboard",
   },
   {
     id: 6,
     name: "Competition",
-    path: "/competition",
+    path: "competition",
   },
 ];
 

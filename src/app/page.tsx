@@ -8,13 +8,13 @@ import ChallengeSection from "@/Containers/challengeSection/challengeSection";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <section className={styles.topSection}>
+      <section className={styles.topSection} id="landing">
         <LandingSection />
       </section>
-      <section className={styles.teamSection}>
+      <section className={styles.teamSection} id="team">
         <TeamSection />
       </section>
-      <section className={styles.challengeSection}>
+      <section className={styles.challengeSection} id="challenge">
         <ChallengeSection />
       </section>
     </main>

@@ -1,19 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./HeaderComponent.module.css";
-import { navItems } from "@/Constants";
 import logo from "../../Images/Logo.png";
-interface MenuItem {
-  id: string;
-  label: string;
-  path: string;
-}
+import { navItems } from "@/Constants";
 
 interface HeaderProps {
   isAuthenticated: boolean;
   isAdmin: boolean;
-  onMenuToggle: () => void;
-  idUser?: number;
 }
 
 const HeaderComponent: React.FC<HeaderProps> = ({
@@ -26,7 +19,13 @@ const HeaderComponent: React.FC<HeaderProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
-  let filteredMenuItems: MenuItem[] = [];
+  const handleMenuItemClick = (id: string) => {
+    setIsMenuOpen(false); // Close the menu when a menu item is clicked
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -38,7 +37,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({
           &#9776;
         </div>
         <div className={styles.headerLogo}>
-          <img src={logo.src} />
+          <img src={logo.src} alt="Logo" />
         </div>
       </header>
       {isMenuOpen && (
@@ -50,7 +49,9 @@ const HeaderComponent: React.FC<HeaderProps> = ({
           <ul className={`${styles.listaMenu} ${isMenuOpen ? "active" : ""}`}>
             {navItems.map((item, index) => (
               <li className={styles.listLi} key={index}>
-                <p>{item.name}</p>
+                <p onClick={() => handleMenuItemClick(item.path)}>
+                  {item.name}
+                </p>
               </li>
             ))}
           </ul>
