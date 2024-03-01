@@ -82,6 +82,17 @@
   box-shadow: 0 0 10px 0 #000000;
 }
 
+@keyframes type {
+  from {
+    width: 0;
+    border-right: 2px solid rgb(0, 0, 0);
+  }
+  to {
+    width: 100%;
+    border-right: none;
+  }
+}
+
 @media (max-width: 767px) {
   .topteamSection {
     flex-direction: column;

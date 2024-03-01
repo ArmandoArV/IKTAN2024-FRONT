@@ -33,6 +33,17 @@
   background-color: #ffffff;
 }
 
+.challengeSection {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  text-align: justify;
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .main {
     padding: 1em;

@@ -84,6 +84,18 @@
   object-fit: cover;
   filter: drop-shadow(16px 16px 20px rgba(0, 0, 0, 0.5));
 }
+
+@keyframes type {
+  from {
+    width: 0;
+    border-right: 2px solid rgb(0, 0, 0);
+  }
+  to {
+    width: 100%;
+    border-right: none;
+  }
+}
+
 @media (max-width: 767px) {
 
     .topSection {
