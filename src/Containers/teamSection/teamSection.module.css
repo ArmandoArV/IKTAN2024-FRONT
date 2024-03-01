@@ -41,6 +41,7 @@
   font-weight: bold;
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid #000000;
 }
 
 .rightBottom {
@@ -78,6 +79,7 @@
   height: auto;
   border: 1px solid #ffffff;
   border-radius: 10px;
+  box-shadow: 0 0 10px 0 #000000;
 }
 
 @media (max-width: 767px) {

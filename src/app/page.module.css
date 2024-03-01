@@ -12,6 +12,7 @@
 
 .topSection {
   width: 100%;
+  min-height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,6 +23,7 @@
 
 .teamSection {
   width: 100%;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
