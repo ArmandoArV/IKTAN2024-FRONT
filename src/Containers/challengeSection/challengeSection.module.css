@@ -73,4 +73,18 @@
   .left {
     width: 100%;
   }
+
+  .top {
+    height: 20%;
+    justify-content: center;
+  }
+
+  .bottom {
+    height: 60%;
+  }
+
+  .top h1{
+    font-size: 2rem;
+    text-align: center;
+  }
 }
