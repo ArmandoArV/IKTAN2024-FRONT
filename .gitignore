@@ -39,3 +39,6 @@ next.config.js
 
 # amplify
 node_modules
+
+# next.js
+next.config.js
