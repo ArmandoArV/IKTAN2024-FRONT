@@ -1,15 +1,16 @@
-import React from "react";
-import styles from "./page.module.css";
+import styles from "./teamSection.module.css";
 import PeopleComponent from "@/Components/PeopleComponent/PeopleComponent";
-import { peopleInfo } from "@/Constants";
 import Bernardo from "../../Images/Bernardo.jpg";
-import Dani from "../../Images/Dani.jpg";
 import David from "../../Images/David.jpg";
+import Dani from "../../Images/Dani.jpg";
+import Image from "next/image";
 import TeamPic from "../../Images/TeamPic.png";
-export default function Home() {
+import { peopleInfo } from "@/Constants";
+
+export default function TeamSection() {
   return (
-    <main className={styles.main}>
-      <div className={styles.top}>
+    <>
+      <div className={styles.topteamSection}>
         <h1 className={styles.title}>Our Team:</h1>
       </div>
       <div className={styles.bottom}>
@@ -22,7 +23,6 @@ export default function Home() {
             />
           </div>
           <div className={styles.peopleContainer}>
-            {" "}
             <PeopleComponent
               name={peopleInfo.Dani.name}
               position={peopleInfo.Dani.position}
@@ -30,7 +30,6 @@ export default function Home() {
             />
           </div>
           <div className={styles.peopleContainer}>
-            {" "}
             <PeopleComponent
               name={peopleInfo.Bernardo.name}
               position={peopleInfo.Bernardo.position}
@@ -40,10 +39,10 @@ export default function Home() {
         </div>
         <div className={styles.rightBottom}>
           <div className={styles.boardImageContainer}>
-            <img src={TeamPic.src} alt="Team" />
+            <Image src={TeamPic} alt="Team" width={500} height={300} />
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }
