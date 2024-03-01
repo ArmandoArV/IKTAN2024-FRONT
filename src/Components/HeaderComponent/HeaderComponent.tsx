@@ -4,14 +4,10 @@ import styles from "./HeaderComponent.module.css";
 import logo from "../../Images/Logo.png";
 import { navItems } from "@/Constants";
 
-interface HeaderProps {
-  isAuthenticated: boolean;
-  isAdmin: boolean;
-}
 
-const HeaderComponent: React.FC<HeaderProps> = ({
-  isAuthenticated,
-  isAdmin,
+
+const HeaderComponent: React.FC = ({
+
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
