@@ -74,6 +74,12 @@
   margin-top: 5%;
 }
 
+.listaMenu li:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: 0.5s;
+}
+
 .listLi a {
   font-size: 2em;
   color: #ffffff;

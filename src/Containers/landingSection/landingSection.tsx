@@ -1,7 +1,6 @@
 import styles from "./landingSection.module.css";
 import { RoverModel } from "@/Components/RoverModel/RoverModel";
 
-
 export default function LandingSection() {
   return (
     <>

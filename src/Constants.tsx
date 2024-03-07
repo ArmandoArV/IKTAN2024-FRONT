@@ -7,6 +7,7 @@ interface navItems {
 interface socialMedia {
   name: string;
   url: string;
+  fa_icon?: string;
 }
 
 interface PeopleInfo {
@@ -62,14 +63,17 @@ export const socialMedia: socialMedia[] = [
   {
     name: "Facebook",
     url: "https://www.facebook.com/IKTANRoving/",
+    fa_icon: "fab fa-facebook",
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/iktan_roving/",
+    fa_icon: "fab fa-instagram",
   },
   {
     name: "TikTok",
     url: "https://www.tiktok.com/@iktan_roving",
+    fa_icon: "fab fa-tiktok",
   },
 ];
 
