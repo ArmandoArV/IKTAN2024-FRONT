@@ -1,7 +1,9 @@
+import React from 'react';
 import styles from "./landingSection.module.css";
 import { RoverModel } from "@/Components/RoverModel/RoverModel";
 
-export default function LandingSection() {
+
+const LandingSection = () => {
   return (
     <>
       <div className={styles.left}>
@@ -33,4 +35,6 @@ export default function LandingSection() {
       </div>
     </>
   );
-}
+};
+
+export default LandingSection;

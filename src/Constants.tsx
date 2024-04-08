@@ -24,7 +24,7 @@ interface temperatureValues {
 export const navItems: navItems[] = [
   {
     id: 0,
-    name: "Home",
+    name: "IktanRoving",
     path: "landing",
   },
   {
@@ -41,21 +41,6 @@ export const navItems: navItems[] = [
     id: 3,
     name: "Achievements",
     path: "achievements",
-  },
-  {
-    id: 4,
-    name: "Sponsors",
-    path: "sponsors",
-  },
-  {
-    id: 5,
-    name: "Dashboard",
-    path: "dashboard",
-  },
-  {
-    id: 6,
-    name: "Competition",
-    path: "competition",
   },
 ];
 
