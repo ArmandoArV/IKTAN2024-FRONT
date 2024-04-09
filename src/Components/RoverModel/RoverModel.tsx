@@ -13,7 +13,7 @@ function ShibaMesh() {
 
   useFrame(() => {
     if (mesh.current) {
-      mesh.current.rotation.y += 0.01;
+      mesh.current.rotation.y += 0.003;
     }
   });
 
@@ -23,7 +23,9 @@ function ShibaMesh() {
 export function RoverModel() {
   return (
     <div className={styles.container}>
+      Use Left and Right click to interact!
       <Canvas className={styles.canvas}>
+        
         <ShibaMesh />
         <OrbitControls />
       </Canvas>

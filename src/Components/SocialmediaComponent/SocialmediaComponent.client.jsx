@@ -15,7 +15,7 @@ const SocialMediaIcons = () => {
           </a>
         </div>
       ))}
-      <p style={{ color: 'black' }}>socialssss</p> {/*For some stupid reason I dont have time to debud, the icons dont appear if there is no text*/}
+      <p style={{ color: '#151515' }}>socials</p> {/*For some stupid reason I dont have time to debud, the icons dont appear if there is no text*/}
     </div>
   );
 };

@@ -12,15 +12,15 @@
     justify-content: space-around; /* Adjust space between icons */
     align-items: center;
     z-index: 1500; /* High value to stay above other content */
-    background-color: black;
-    color: black;
+    background-color: #000000;
+    color: #000000;
   }
   
   
   .socialIcon {
     margin: 10px 0; /* Spacing between icons */
     /* Additional styling as needed */
-    background-color: black;
-    color: black;
+    background-color: #000000;
+    color: #000000;
   }
    

@@ -1,11 +1,11 @@
-import Image from "next/image";
+
 import styles from "./page.module.css";
 import Rover from "../Images/Rover.png";
 import TeamSection from "@/Containers/teamSection/teamSection";
 import LandingSection from "@/Containers/landingSection/landingSection";
 import ChallengeSection from "@/Containers/challengeSection/challengeSection";
 import FooterComponent from "@/Components/FooterComponent/FooterComponent";
-import WeAreIktan from "@/Images/WeAreIktan.png";
+
 import DownArrow from "@/Components/Arrow/ArrowComponent";
 import SocialMediaIcons from "@/Components/SocialmediaComponent/SocialmediaComponent.client";
 
@@ -16,9 +16,6 @@ export default function Home() {
         <SocialMediaIcons />
       </div>
       <main className={styles.main}>
-        <div>
-          <Image src={WeAreIktan} alt="We are Iktan" width={665} height={176} />
-        </div>
         <section className={styles.topSection} id="landing">
           <LandingSection />
         </section>
@@ -32,8 +29,8 @@ export default function Home() {
         <section className={styles.challengeSection} id="challenge">
           <ChallengeSection />
         </section>
+        <FooterComponent />
       </main>
-      <FooterComponent />
     </>
   );
 }

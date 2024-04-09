@@ -19,7 +19,7 @@
 
 .menuContainer {
   display: flex;
-  align-items: flex-start; /* Align items to the top of the container */
+  align-items: flex-start; 
 }
 
 .menuList {
@@ -31,16 +31,17 @@
 }
 
 .menuItem {
-  padding-left: 50px; /* Adjust as needed */
+  padding-left: 50px; 
   padding-right: 50px;
 }
 
 .menuItem p {
-  font-size: 1.5em; /* Adjust font size */
-  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  font-size: 2em; 
+  font-family: 'Montserrat', sans-serif; 
   color: #ffffff;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  margin-top: 18px;
 }
 
 .menuItem p:hover {
