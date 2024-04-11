@@ -21,6 +21,8 @@ interface temperatureValues {
   [key: string]: number;
 }
 
+export const API_URL = "http://api.iktanroving.org"
+
 export const navItems: navItems[] = [
   {
     id: 0,

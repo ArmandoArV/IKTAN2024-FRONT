@@ -5,9 +5,14 @@ import LightMeasure from "@/Components/LightMeasureContainer/LightMeasure";
 import MySVG from "@/Components/SVGComponent/SVGComponent";
 import { temperatureValues } from "@/Constants";
 import ChartComponent from "@/Components/ChartComponent/ChartComponent";
+import { API_URL } from "@/Constants";
 
 export default function Home() {
   const [getTemperature, setTemperture] = useState<number>(0);
+
+  const [accelerationData, setAccelerationData] = useState<number[]>([]);
+  const [accelerationLabels, setAccelerationLabels] = useState<string[]>([]);
+
   const getTemperatureIconName = () => {
     switch (true) {
       case getTemperature > temperatureValues.high:
@@ -28,15 +33,40 @@ export default function Home() {
         return "black";
     }
   };
-  const chartData = [12, 19, 3, 5, 2, 3];
-  const chartLabels = [
-    "Label 1",
-    "Label 2",
-    "Label 3",
-    "Label 4",
-    "Label 5",
-    "Label 6",
-  ];
+
+  const fetchAccelerationData = async () => {
+    try {
+      const response = await fetch(`${API_URL}/rover/acceleration/0`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+      const data = await response.json();
+      console.log(data);
+      const labels: string[] = [];
+      const values: number[] = [];
+      data.forEach((element: any) => {
+        labels.push(element.timestamp);
+        values.push(element.value);
+      });
+      setAccelerationData(values);
+      setAccelerationLabels(labels);
+    } catch (error) {
+      console.error("Error fetching acceleration data:", error);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetchAccelerationData();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -51,8 +81,8 @@ export default function Home() {
           </div>
           <div className={styles.bottomContainer}>
             <ChartComponent
-              data={chartData}
-              labels={chartLabels}
+              data={accelerationData}
+              labels={accelerationLabels}
               graphTitle="So"
               isFilled={true}
               chartType="line"
