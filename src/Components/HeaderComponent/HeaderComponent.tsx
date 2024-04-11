@@ -1,59 +1,51 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./HeaderComponent.module.css";
 import logo from "../../Images/Logo.png";
 import { navItems } from "@/Constants";
 
-
-
-const HeaderComponent: React.FC = ({
-
-}) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+const HeaderComponent: React.FC = () => {
   const handleMenuItemClick = (id: string) => {
-    setIsMenuOpen(false); // Close the menu when a menu item is clicked
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  // Splitting navItems into two separate arrays for left and right menus
+  const leftMenuItems = navItems.slice(2);
+  const rightMenuItems = navItems.slice(0, 2);
+
   return (
-    <>
-      <header className={styles.Header}>
-        <div
-          className={`${styles.headerMenu} ${isMenuOpen ? "active" : ""}`}
-          onClick={handleMenuToggle}
-        >
-          &#9776;
-        </div>
-        <div className={styles.headerLogo}>
-          <img src={logo.src} alt="Logo" />
-        </div>
-      </header>
-      {isMenuOpen && (
-        <div
-          className={`${styles.MenuDesplegable} ${
-            isMenuOpen ? styles.open : ""
-          }`}
-        >
-          <ul className={`${styles.listaMenu} ${isMenuOpen ? "active" : ""}`}>
-            {navItems.map((item, index) => (
-              <li className={styles.listLi} key={index}>
+    <div className={styles.container}>
+    <header className={styles.Header}>
+      <div className={styles.headerContent}>
+        <nav className={styles.menuContainer}>
+          <ul className={styles.menuList}>
+            {leftMenuItems.map((item, index) => (
+              <li className={styles.menuItem} key={index}>
                 <p onClick={() => handleMenuItemClick(item.path)}>
                   {item.name}
                 </p>
               </li>
             ))}
           </ul>
-        </div>
-      )}
-    </>
+          <div className={styles.headerLogo}>
+            <img src={logo.src} alt="Logo" />
+          </div>
+          <ul className={styles.menuList}>
+            {rightMenuItems.map((item, index) => (
+              <li className={styles.menuItem} key={index}>
+                <p onClick={() => handleMenuItemClick(item.path)}>
+                  {item.name}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    </div>
   );
 };
 

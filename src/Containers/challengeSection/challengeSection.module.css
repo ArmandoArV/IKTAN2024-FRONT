@@ -6,6 +6,7 @@
   text-align: justify;
   color: #fff;
   justify-content: center;
+  padding-right: 100px;
 }
 
 .left {
@@ -16,6 +17,7 @@
   text-align: justify;
   align-items: center;
   justify-content: center;
+  
 }
 
 .top {
@@ -39,7 +41,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1em;
-  height: 55%;
+  height: 90%;
 }
 
 .top h1 {
@@ -50,10 +52,23 @@
 }
 
 .bottom p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-top: 2em;
+  color: rgb(126, 126, 126) ;
+}
+.bottom strong {
+  color: rgb(255, 255, 255);
 }
 
+.left p {
+  font-size: 1.6rem;
+  margin-top: 2em;
+  color: rgb(126, 126, 126) ;
+  padding-top: '150px';
+}
+.left strong {
+  color: rgb(255, 255, 255);
+}
 @keyframes type {
   from {
     width: 0;

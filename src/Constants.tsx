@@ -17,6 +17,12 @@ interface PeopleInfo {
   };
 }
 
+interface Sponsor {
+  name: string;
+  logo: StaticImageData;
+  url: string;
+}
+
 interface temperatureValues {
   [key: string]: number;
 }
@@ -26,7 +32,7 @@ export const API_URL = "http://api.iktanroving.org"
 export const navItems: navItems[] = [
   {
     id: 0,
-    name: "Home",
+    name: "IktanRoving",
     path: "landing",
   },
   {
@@ -43,21 +49,6 @@ export const navItems: navItems[] = [
     id: 3,
     name: "Achievements",
     path: "achievements",
-  },
-  {
-    id: 4,
-    name: "Sponsors",
-    path: "sponsors",
-  },
-  {
-    id: 5,
-    name: "Dashboard",
-    path: "dashboard",
-  },
-  {
-    id: 6,
-    name: "Competition",
-    path: "competition",
   },
 ];
 
@@ -99,3 +90,39 @@ export const temperatureValues: temperatureValues = {
   "temperature-half": 30,
   "temperature-low": 20,
 };
+
+
+import femsa from "@/Images/FEMSA.png";
+import wurth from "@/Images/Wurth_logo.png";  
+import jufusa from "@/Images/Jufusa.png";
+import netLogistiK from "@/Images/netLogitiK.png";      
+import baxter from "@/Images/Baxter.png";
+import { StaticImageData } from "next/image";
+export const sponsors: Sponsor[] = [
+  
+  {
+    name: "Wurth",
+    logo: wurth,
+    url: "https://www.tiendawurth.com.mx/",
+  },
+  {
+    name: "Jufusa",
+    logo: jufusa,
+    url: "https://www.jufusa.com.mx/",
+  },
+  {
+    name: "Net LogistiK",
+    logo: netLogistiK,
+    url: "https://www.netlogistik.com/es/",
+  },
+  {
+    name: "Baxter",
+    logo: baxter,
+    url: "https://www.baxter.mx/es/quienes-somos/baxter-mexico",
+  },
+  {
+    name: "FEMSA",
+    logo: femsa,
+    url: "https://www.femsa.com/",
+  },
+];

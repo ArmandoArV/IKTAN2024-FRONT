@@ -11,6 +11,15 @@ export default function ChallengeSection() {
     <>
       <div className={styles.left}>
         <SliderComponent images={images} slideInterval={3000} />
+        <p>
+            During <strong>Apollo 15 </strong> astronauts utilized the first automotive vehicle on
+            the moon, the <strong>Lunar Roving Vehicle (LRV)</strong>. With this rover,
+            <strong> astronauts were able to collect more lunar samples than the previous
+            two Moon-landing </strong> missions combined and spent twice the time on Moon
+            than Apollo 14. <strong>Taking inspiration from the LRV, HERC aligns with
+            NASA’s</strong> mission to further scientific exploration and <strong>experiments on
+            the Moon with the use of a roving vehicle.</strong>
+          </p>
       </div>
       <div className={styles.right}>
         <div className={styles.top}>
@@ -21,22 +30,14 @@ export default function ChallengeSection() {
         </div>
         <div className={styles.bottom}>
           <p>
-            Each year the NASA Human Exploration Rover Challenge (HERC) features
-            an engineering design challenge to engage students worldwide in the
-            next phase of human space exploration. As an Artemis Student
+            Each year the <strong>NASA Human Exploration Rover Challenge (HERC)</strong> features
+            an engineering design <strong>challenge to engage students</strong> worldwide in the
+            <strong> next phase of human space exploration.</strong> As an Artemis Student
             Challenge, HERC draws inspiration from both the Apollo and Artemis
-            missions, emphasizing designing, constructing, and testing
-            technologies, and traversing in unique environmental terrains.
+            missions, emphasizing <strong>designing, constructing, and testing
+            technologies,</strong> and traversing in unique environmental terrains.
           </p>
-          <p>
-            During Apollo 15 astronauts utilized the first automotive vehicle on
-            the moon, the Lunar Roving Vehicle (LRV). With this rover,
-            astronauts were able to collect more lunar samples than the previous
-            two Moon-landing missions combined and spent twice the time on Moon
-            than Apollo 14. Taking inspiration from the LRV, HERC aligns with
-            NASA’s mission to further scientific exploration and experiments on
-            the Moon with the use of a roving vehicle.
-          </p>
+          <SliderComponent images={images} slideInterval={3000} />
         </div>
       </div>
     </>
