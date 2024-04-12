@@ -6,8 +6,38 @@ import Dani from "../../Images/Dani.jpg";
 import Image from "next/image";
 import TeamPic from "../../Images/TeamPic.png";
 import { peopleInfo } from "@/Constants";
+import SliderComponent from "@/Components/SliderComponent/SliderComponent";
+import slider0 from "../../Images/slider0.webp";
+import slider1 from "../../Images/slider1.jpg";
+import slider2 from "../../Images/slider2.jpg";
+import slider3 from "../../Images/slider3.jpg";
+import slider4 from "../../Images/slider4.jpg";
+import slider5 from "../../Images/slider5.jpg";
+import slider6 from "../../Images/slider6.jpg";
+import slider7 from "../../Images/slider7.jpg";
+import slider8 from "../../Images/slider8.jpg";
+import slider9 from "../../Images/slider9.jpg";
+import slider10 from "../../Images/slider10.jpeg";
+import slider11 from "../../Images/slider11.jpg";
+import slider12 from "../../Images/slider12.jpg";
 
 export default function TeamSection() {
+  const images = [
+    TeamPic,
+    slider0,
+    slider1,
+    slider2,
+    slider3,
+    slider4,
+    slider5,
+    slider6,
+    slider7,
+    slider8,
+    slider9,
+    slider10,
+    slider11,
+    slider12,
+  ];
   return (
     <>
       <div className={styles.topteamSection}>
@@ -38,9 +68,7 @@ export default function TeamSection() {
           </div>
         </div>
         <div className={styles.rightBottom}>
-          <div className={styles.boardImageContainer}>
-            <Image src={TeamPic} alt="Team" width={500} height={300} />
-          </div>
+          <SliderComponent images={images} slideInterval={3000} />
         </div>
       </div>
     </>
