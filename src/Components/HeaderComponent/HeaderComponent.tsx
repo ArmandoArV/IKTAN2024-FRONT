@@ -3,31 +3,36 @@ import React from "react";
 import styles from "./HeaderComponent.module.css";
 import logo from "../../Images/Logo.png";
 import { navItems } from "@/Constants";
-import { useRouter,usePathname  } from 'next/navigation'
-
-
+import { useRouter, usePathname } from "next/navigation";
 
 const HeaderComponent: React.FC = () => {
-  const router = useRouter()
-  const pathname = usePathname()
+  const router = useRouter();
+  const pathname = usePathname();
   const handleMenuItemClick = (id: string, name: string) => {
     const section = document.getElementById(id);
-    
-    if (section === null && pathname === '/' || pathname === '/dashboard') {
-      //console.log("Redirecting to achievements page");
-      router.push('/achievements')
+
+    if (!section) {
+      return;
     }
-    if (section === null && pathname === '/achievements' || pathname === '/dashboard') { //Si en /achievements le picas a Achievements te manda a /, lo cual no deberia hacer
-      const id = navItems.find((item) => item.name === name)?.path;
-      router.push('/')
-      setTimeout(() => { // Esto es horrible pero no encuentro otra manera de que sirva
-        const section = document.getElementById(id);
-        section.scrollIntoView({ behavior: "smooth" });
-      }, 500)
+
+    if ((section === null && pathname === "/") || pathname === "/dashboard") {
+      router.push("/achievements");
+    }
+    if (
+      (section === null && pathname === "/achievements") ||
+      pathname === "/dashboard"
+    ) {
+      const itemId = navItems.find((item) => item.name === name)?.path;
+      router.push("/");
+      setTimeout(() => {
+        const section = document.getElementById(itemId as string);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 500);
     }
     if (section) {
-      console.log(pathname)
-      
+      console.log(pathname);
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -49,7 +54,6 @@ const HeaderComponent: React.FC = () => {
                   </p>
                 </li>
               ))}
-             
             </ul>
             <div className={styles.headerLogo}>
               <img src={logo.src} alt="Logo" />
