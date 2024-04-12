@@ -11,6 +11,7 @@ export default function Home() {
   const [getTemperature, setTemperture] = useState<number>(0);
 
   const [accelerationData, setAccelerationData] = useState<number[]>([]);
+
   const [accelerationLabels, setAccelerationLabels] = useState<string[]>([]);
 
   const getTemperatureIconName = () => {
@@ -41,7 +42,6 @@ export default function Home() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
           },
         }
       );
@@ -83,10 +83,18 @@ export default function Home() {
             <ChartComponent
               data={accelerationData}
               labels={accelerationLabels}
-              graphTitle="So"
+              graphTitle="Acceleration"
               isFilled={true}
               chartType="line"
             />
+            <ChartComponent
+              data={accelerationData}
+              labels={accelerationLabels}
+              graphTitle="Temperature"
+              isFilled={true}
+              chartType="line"
+            />
+
           </div>
         </div>
         <div className={styles.rightContainer}>
