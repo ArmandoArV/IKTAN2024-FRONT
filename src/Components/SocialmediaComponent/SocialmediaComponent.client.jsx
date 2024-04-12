@@ -11,7 +11,7 @@ const SocialMediaIcons = () => {
       {socialMedia.map((link, index) => (
         <div key={index} className={styles.socialIcon}>
           <a href={link.url} target="_blank" rel="noopener noreferrer">
-            <MySVG name={link.fa_icon} color="#fff" />
+            <MySVG name={link.fa_icon} className={styles.socialIcon} color="#fff" />
           </a>
         </div>
       ))}

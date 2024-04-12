@@ -63,8 +63,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60%;
+  height: 80%;
 }
+
 
 .top h1 {
   font-size: 2rem;
@@ -79,6 +80,10 @@
   margin-top: 2em;
 }
 
+.bottom strong {
+  color: rgb(255, 255, 255);
+}
+
 .rover {
   width: 100%;
   height: 100%;
@@ -88,7 +93,8 @@
 .imageContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centers both elements horizontally */
+  align-items: center; /* Aligns both elements vertically */
 }
 
 
@@ -98,6 +104,11 @@
   justify-content: space-between;
 }
 
+.bottom p {
+  font-size: 1.6rem;
+  margin-top: 2em;
+  color: rgb(126, 126, 126) ;
+}
 
 
 @keyframes type {

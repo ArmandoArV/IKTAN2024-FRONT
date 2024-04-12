@@ -1,60 +1,60 @@
-.main {
+.achievement-title {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 7.5vw;
+  margin-bottom: -2%;
+}
+
+.title-text {
+  font-size: 3vw;
+}
+
+.svg-a {
+  width: 3.5vw;
+  height: auto;
+}
+
+.underline {
+  border-bottom: 7.5px solid #FFFFFF;
+  border-radius: 15px;
+  width: 37.5vw;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: 2.5%;
+
+}
+
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.top-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievement-count {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-  background-color: #fff;
-  color: #000;
-}
-.right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  text-align: justify;
 }
 
-.left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  text-align: justify;
+.achievement-image,
+.achievement-text {
+  flex: 1;
+  max-width: 40%;
+  border-radius: 16px;
+  text-align: justify;;
 }
 
-.top {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  height: 20%;
+.achievement-text {
+  align-self: flex-start;
 }
 
-.middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  height: 20%;
-}
-
-.bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  height: 60%;
-}
-
-.top h1 {
-  font-size: 4rem;
-}
-
-.bottom p {
-  font-size: 1.2rem;
-  margin-top: 2em;
+.highlighted-text {
+  color: #646EA4;
 }

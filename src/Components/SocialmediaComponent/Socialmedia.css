@@ -14,13 +14,14 @@
     z-index: 1500; /* High value to stay above other content */
     background-color: #000000;
     color: #000000;
+    
   }
   
   
   .socialIcon {
-    margin: 10px 0; /* Spacing between icons */
-    /* Additional styling as needed */
+    margin: 10px 0;
     background-color: #000000;
     color: #000000;
+    height: 4em;
   }
    

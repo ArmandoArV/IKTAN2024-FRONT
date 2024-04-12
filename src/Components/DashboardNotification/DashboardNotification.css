@@ -1,0 +1,28 @@
+
+.image-text-container {
+  position: relative; /* Enable relative positioning for child elements */
+  cursor: pointer;
+}
+
+
+
+.live-text {
+  position: absolute; /* Make the "LIVE" text positioned absolutely */
+
+  transform: translate(-50%, -50%); /* Offset the position for centering */
+  background-color: red;
+  color: white;
+  padding: 5px 10px; /* Add some padding */
+  font-weight: bold; /* Make the text bold */
+}
+
+.under-text {
+    position: absolute; /* Make the "LIVE" text positioned absolutely */
+  
+    transform: translate(10%, -15%); /* Offset the position for centering */
+    background-color: red;
+    color: white;
+    padding: 5px 10px; /* Add some padding */
+    font-weight: bold; /* Make the text bold */
+  }
+  
