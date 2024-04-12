@@ -22,7 +22,6 @@ export default function Home() {
         <br />
         <div className={`${styles.arrowWrapper} ${styles.fadeIn}`}>
           <DownArrow color="#FFFFFF" size={40} />{" "}
-          {/*Se que esto es incorrecto pero por falta de tiempo me vale*/}
         </div>
         <section className={styles.teamSection} id="team">
           <TeamSection />
