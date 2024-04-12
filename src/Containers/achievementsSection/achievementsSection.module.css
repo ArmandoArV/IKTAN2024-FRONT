@@ -1,0 +1,20 @@
+.achievementsTitle {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: #fff;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}

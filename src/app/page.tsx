@@ -6,7 +6,7 @@ import ChallengeSection from "@/Containers/challengeSection/challengeSection";
 import FooterComponent from "@/Components/FooterComponent/FooterComponent";
 import DownArrow from "@/Components/Arrow/ArrowComponent";
 import SocialMediaIcons from "@/Components/SocialmediaComponent/SocialmediaComponent.client";
-
+import AchievementsSection from "@/Containers/achievementsSection/achievementsSection";
 export default function Home() {
   return (
     <>
@@ -28,6 +28,9 @@ export default function Home() {
         </section>
         <section className={styles.challengeSection} id="challenge">
           <ChallengeSection />
+        </section>
+        <section className={styles.achievementsSection} id="achievements">
+          <AchievementsSection />
         </section>
         <FooterComponent />
       </main>

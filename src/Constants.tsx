@@ -27,6 +27,12 @@ interface temperatureValues {
   [key: string]: number;
 }
 
+export interface AchievementComponentProps {
+  achievementImage: string;
+  achievementTitle: string;
+  achievementYear?: string;
+}
+
 export const API_URL = "http://api.iktanroving.org"
 
 export const navItems: navItems[] = [
@@ -90,6 +96,85 @@ export const temperatureValues: temperatureValues = {
   "temperature-half": 30,
   "temperature-low": 20,
 };
+
+
+import achievement1 from "@/Images/achievement1.jpeg";
+import achievement2 from "@/Images/achievement2.jpeg";
+import achievement3 from "@/Images/achievement3.jpeg";
+import achievement4 from "@/Images/achievement4.jpeg";
+import achievement5 from "@/Images/achievement5.jpeg";
+import achievement6 from "@/Images/achievement6.jpeg";
+import achievement7 from "@/Images/achievement7.jpeg";
+import achievement8 from "@/Images/achievement8.jpeg";
+import achievement9 from "@/Images/achievement9.jpeg";
+import achievement10 from "@/Images/achievement10.jpeg";
+import achievement11 from "@/Images/achievement11.jpeg";
+import achievement12 from "@/Images/achievement12.jpeg";
+import achievement13 from "@/Images/achievement13.jpeg";
+
+export const achievements: AchievementComponentProps[] = [
+  {
+    achievementImage: achievement1.src,
+    achievementTitle: "Team Participation",
+    achievementYear: "",
+  },
+  {
+    achievementImage: achievement2.src,
+    achievementTitle: "Team Participation",
+    achievementYear: "April 2014",
+  },
+  {
+    achievementImage: achievement3.src,
+    achievementTitle: "Team Participation",
+    achievementYear: "April 2015",
+  },
+  {
+    achievementImage: achievement5.src,
+    achievementTitle: "Team Participation",
+    achievementYear: "2016",
+  },
+  {
+    achievementImage: achievement6.src,
+    achievementTitle: "Team Participation",
+    achievementYear: "2017",
+  },
+  {
+    achievementImage: achievement7.src,
+    achievementTitle: "Team Participation",
+    achievementYear: "2018",
+  },
+  {
+    achievementImage: achievement8.src,
+    achievementTitle: "Jesco Von Puttkamer Award ",
+    achievementYear: "2019",
+  },
+  {
+    achievementImage: achievement9.src,
+    achievementTitle: "Crash and Burn Award",
+    achievementYear: "2020",
+  },
+  {
+    achievementImage: achievement10.src,
+    achievementTitle: "Telemetry Award",
+    achievementYear: "2020",
+  },
+  {
+    achievementImage: achievement11.src,
+    achievementTitle: "2nd Place Winner",
+    achievementYear: "2021",
+  },
+  {
+    achievementImage: achievement12.src,
+    achievementTitle: "1st Place Award",
+    achievementYear: "2022",
+  },
+  {
+    achievementImage: achievement13.src,
+    achievementTitle: "Ingenuity Award",
+    achievementYear: "2023",
+  },
+
+];
 
 
 import femsa from "@/Images/FEMSA.png";

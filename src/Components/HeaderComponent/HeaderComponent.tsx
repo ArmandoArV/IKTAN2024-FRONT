@@ -4,6 +4,7 @@ import styles from "./HeaderComponent.module.css";
 import logo from "../../Images/Logo.png";
 import { navItems } from "@/Constants";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 
 const HeaderComponent: React.FC = () => {
   const router = useRouter();
@@ -13,23 +14,6 @@ const HeaderComponent: React.FC = () => {
 
     if (!section) {
       return;
-    }
-
-    if ((section === null && pathname === "/") || pathname === "/dashboard") {
-      router.push("/achievements");
-    }
-    if (
-      (section === null && pathname === "/achievements") ||
-      pathname === "/dashboard"
-    ) {
-      const itemId = navItems.find((item) => item.name === name)?.path;
-      router.push("/");
-      setTimeout(() => {
-        const section = document.getElementById(itemId as string);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 500);
     }
     if (section) {
       console.log(pathname);
@@ -56,7 +40,9 @@ const HeaderComponent: React.FC = () => {
               ))}
             </ul>
             <div className={styles.headerLogo}>
-              <img src={logo.src} alt="Logo" />
+              <Link href="/">
+                <img src={logo.src} alt="Logo" />
+              </Link>
             </div>
             <ul className={styles.menuList}>
               {rightMenuItems.map((item, index) => (
