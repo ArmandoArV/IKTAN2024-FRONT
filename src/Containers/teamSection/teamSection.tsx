@@ -12,7 +12,7 @@ import slider1 from "../../Images/slider1.jpg";
 import slider2 from "../../Images/slider2.jpg";
 import slider3 from "../../Images/slider3.jpg";
 import slider4 from "../../Images/slider4.jpg";
-import slider5 from "../../Images/slider5.jpg";
+
 import slider6 from "../../Images/slider6.jpg";
 import slider7 from "../../Images/slider7.jpg";
 import slider8 from "../../Images/slider8.jpg";
@@ -29,7 +29,6 @@ export default function TeamSection() {
     slider2,
     slider3,
     slider4,
-    slider5,
     slider6,
     slider7,
     slider8,
