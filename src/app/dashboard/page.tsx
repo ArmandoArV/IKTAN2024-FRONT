@@ -52,7 +52,7 @@ export default function Home() {
 
   const fetchAccelerationData = async () => {
     try {
-      const response = await fetch(`${API_URL}/rover/allAcceleration`,
+      const response = await fetch(`${API_URL}/rover/allAccelerations`,
         {
           method: "GET",
           headers: {
@@ -102,7 +102,7 @@ export default function Home() {
 
   const fetchAngs = async () => {
     try {
-      const response = await fetch(`${API_URL}/rover/allAccelerations`,
+      const response = await fetch(`${API_URL}/rover/allAngs`,
         {
           method: "GET",
           headers: {
